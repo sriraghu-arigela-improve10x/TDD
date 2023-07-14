@@ -79,6 +79,6 @@ public class NameInverterTest {
      @Test
     public void integrationTest() {
         String invertedName = nameInverter.invertName("Mr. Bob Martins MSc. PhD");
-        assertEquals("Martins, Bob MSc. PhD.", invertedName);
+        assertEquals("Martins, Bob MSc. PhD", invertedName);
     }
 }

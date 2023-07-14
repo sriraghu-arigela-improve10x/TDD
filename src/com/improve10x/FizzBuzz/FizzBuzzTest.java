@@ -19,10 +19,10 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void givenIntNumberThreeFive_returnsFizzBuzz() {
+    public void givenIntNumberFifteen_returnsFizzBuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        String ThreeFive = fizzBuzz.findFizzBuzz(15);
-        assertEquals("FizzBuzz", ThreeFive);
+        String fifteen = fizzBuzz.findFizzBuzz(15);
+        assertEquals("FizzBuzz", fifteen);
     }
 
     @Test
