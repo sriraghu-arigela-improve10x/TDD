@@ -20,19 +20,25 @@ public class ThreeProgrammersTest {
 
     @Test
     public void givenZeros_returnZeros() {
-        int returnZero = programmers.threeProgrammers(0, 0, 0);
+        int returnZero = programmers.findMaxMin(0, 0, 0);
         assertEquals(-1, returnZero);
     }
 
     @Test
     public void givenThreeValues_returnMaxAndMinValue() {
-        int returnThousand = programmers.threeProgrammers(1500, 500, 1000);
+        int returnThousand = programmers.findMaxMin(1500, 500, 1000);
         assertEquals(1000, returnThousand);
     }
 
     @Test
     public void givenInputThreeValues_returnMaxAndMinValue() {
-        int returnOne = programmers.threeProgrammers(1, 2, 1);
+        int returnOne = programmers.findMaxMin(1, 2, 1);
         assertEquals(1, returnOne);
+    }
+
+    @Test
+    public void givenFourValues_returnZero() {
+        int maxMinValues = programmers.findMaxMin(100, 200, 300);
+        assertEquals(200, maxMinValues);
     }
 }

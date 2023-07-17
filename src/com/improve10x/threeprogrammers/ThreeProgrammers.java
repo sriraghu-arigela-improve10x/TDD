@@ -1,7 +1,7 @@
 package com.improve10x.threeprogrammers;
 
 public class ThreeProgrammers {
-    public int threeProgrammers(int paid1, int paid2, int paid3) {
+    public int findMaxMin(int paid1, int paid2, int paid3) {
         if (paid1 <= 0 || paid2 <= 0 || paid3 <= 0) {
             return -1;
         } else {
