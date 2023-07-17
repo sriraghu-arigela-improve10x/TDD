@@ -12,6 +12,8 @@ public class FactorialNumberTest {
 
     }
 
+
+    //input 4 - output = 24
     @Test
     public void givenFour_returnsFactorialNum(){
         FactorialNumber factorialNumber = new FactorialNumber();
@@ -19,6 +21,7 @@ public class FactorialNumberTest {
         assertEquals(24, factoNum);
     }
 
+    //input 5 - output = 120
     @Test
     public void givenFive_returnsFactorialNum(){
         FactorialNumber factorialNumber = new FactorialNumber();
@@ -26,6 +29,7 @@ public class FactorialNumberTest {
         assertEquals(120, factoNum);
     }
 
+    //input 6 - output = 720
     @Test
     public void givenSix_returnsFactorialNum(){
         FactorialNumber factorialNumber = new FactorialNumber();

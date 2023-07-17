@@ -8,16 +8,19 @@ import static org.junit.Assert.assertEquals;
 public class FizzBuzzTest {
 
     @Test
-    public void noting(){
+    public void noting() {
     }
 
+
+    //input 0 - output -0
     @Test
     public void givenEmpty_returnEmpty() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String empty = fizzBuzz.findFizzBuzz(0);
-        assertEquals(empty, empty);
+        assertEquals("0", empty);
     }
 
+    //given input 15 output = FizzBuzz
     @Test
     public void givenIntNumberFifteen_returnsFizzBuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
@@ -25,13 +28,15 @@ public class FizzBuzzTest {
         assertEquals("FizzBuzz", fifteen);
     }
 
+    //given input 3 output = Fizz
     @Test
     public void givenThreeNumber_returnsFizz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String three = fizzBuzz.findFizzBuzz(3);
-        assertEquals("Fuzz", three);
+        assertEquals("Fizz", three);
     }
 
+    ////given input 5 output = buzz
     @Test
     public void givenFiveNumber_returnsBuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();

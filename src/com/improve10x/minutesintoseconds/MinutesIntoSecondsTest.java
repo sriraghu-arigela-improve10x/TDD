@@ -11,7 +11,7 @@ public class MinutesIntoSecondsTest {
     public void nothing() {
 
     }
-
+    // input 5 - output 300
     @Test
     public void giveFiveMinutes_returnSeconds() {
         Minutes minutes = new Minutes();
@@ -19,6 +19,8 @@ public class MinutesIntoSecondsTest {
         assertEquals(300, seconds);
     }
 
+
+    // input 10 - output 600
     @Test
     public void giveTenMinutes_returnSeconds() {
         Minutes minutes = new Minutes();
@@ -26,6 +28,7 @@ public class MinutesIntoSecondsTest {
         assertEquals(600, seconds);
     }
 
+    //input 15 - output 900
     @Test
     public void giveFifteenMinutes_returnSeconds() {
         Minutes minutes = new Minutes();
