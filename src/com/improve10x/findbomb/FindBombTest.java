@@ -1,4 +1,4 @@
-package com.improve10x.findboom;
+package com.improve10x.findbomb;
 
 import org.junit.Before;
 import org.junit.Test;

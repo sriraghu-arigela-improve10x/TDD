@@ -1,4 +1,4 @@
-package com.improve10x.findboom;
+package com.improve10x.findbomb;
 
 public class FindBomb {
     public String CheckWord(String name) {
