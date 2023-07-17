@@ -18,14 +18,14 @@ public class ThreeProgrammersTest {
     }
 
     @Test
-    public void threeProgrammers() {
+    public void givenThreeValues_returnMaxAndMinValue() {
         ThreeProgrammers programmers = new ThreeProgrammers();
         int returnThousand = programmers.threeProgrammers(1500, 500, 1000);
         assertEquals(1000, returnThousand);
     }
 
     @Test
-    public void threeProgrammersTest() {
+    public void givenInputThreeValues_returnMaxAndMinValue() {
         ThreeProgrammers programmers = new ThreeProgrammers();
         int returnOne = programmers.threeProgrammers(1, 2, 1);
         assertEquals(1, returnOne);
