@@ -34,6 +34,11 @@ public class AgeToDaysTest {
         assertEquals(-1, days);
     }
 
+    @Test
+    public void givenOneDay_returnSame() {
+        int days = ageToDays.convertAgeToDays(1);
+        assertEquals(365, days);
+    }
     //input 10 - expected - 3650
     @Test
     public void givenThreeThousandSixHundredAndFiftyDays_returnAgeTen() {
