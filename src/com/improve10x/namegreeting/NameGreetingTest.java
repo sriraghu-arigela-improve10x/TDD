@@ -22,7 +22,7 @@ public class NameGreetingTest {
     @Test
     public void givenEmptyName_returnEmptyName() {
         String name = nameGreeting.setNameGreeting("");
-        assertEquals("hello !", name);
+        assertEquals("Hello !", name);
     }
 
     //helloName( “Geraid”)     = “ Hello Geraid! ”
@@ -44,5 +44,11 @@ public class NameGreetingTest {
     public void givenNameTiffany_returnHelloTiffanyExclamationMark() {
         String name = nameGreeting.setNameGreeting("Tiffany");
         assertEquals("Hello Tiffany!", name);
+    }
+
+    @Test
+    public void givenNameSriRaghu_returnHelloSriRaghuExclamationMark() {
+        String name = nameGreeting.setNameGreeting("SriRaghu");
+        assertEquals("Hello SriRaghu!", name);
     }
 }

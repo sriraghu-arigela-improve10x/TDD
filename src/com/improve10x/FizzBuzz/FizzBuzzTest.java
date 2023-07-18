@@ -11,7 +11,6 @@ public class FizzBuzzTest {
     public void noting() {
     }
 
-
     //input 0 - output -0
     @Test
     public void givenEmpty_returnEmpty() {
