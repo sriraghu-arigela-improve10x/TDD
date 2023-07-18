@@ -1,8 +1,10 @@
 package com.improve10x.threeprogrammers;
 
 public class ThreeProgrammers {
-    public int findMaxMin(int paid1, int paid2, int paid3) {
-        if (paid1 <= 0 || paid2 <= 0 || paid3 <= 0) {
+    public int differenceMaxMin(int paid1, int paid2, int paid3) {
+        if(paid1 == 0 || paid2 == 0 || paid3 == 0) {
+            return 1;
+        } else if (paid1 < 0 || paid2 < 0 || paid3 < 0) {
             return -1;
         } else {
             int difference = 0;

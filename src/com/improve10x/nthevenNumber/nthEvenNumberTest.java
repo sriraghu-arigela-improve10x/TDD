@@ -18,11 +18,23 @@ public class nthEvenNumberTest {
     @Test
     public void nothing(){}
 
+    @Test
+    public void givenNegativeNumber_returnNegativeNumber(){
+        int evenNumber = nthEvenNumber.findEvenNumber(-10);
+        assertEquals(-1, evenNumber);
+    }
+
     //input 0 - expected output -0
     @Test
     public void givenEvenNumberIsZero_returnEvenNumberIsZero(){
+        int evenNumber = nthEvenNumber.findEvenNumber(-1);
+        assertEquals(-1, evenNumber);
+    }
+
+    @Test
+    public void givenEvenNumberIsZero_returnEvenNumberIsOne(){
         int evenNumber = nthEvenNumber.findEvenNumber(0);
-        assertEquals(0, evenNumber);
+        assertEquals(1, evenNumber);
     }
 
     //input 10 - expected output -18

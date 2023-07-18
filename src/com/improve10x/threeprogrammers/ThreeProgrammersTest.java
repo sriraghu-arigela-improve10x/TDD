@@ -19,26 +19,51 @@ public class ThreeProgrammersTest {
     }
 
     @Test
-    public void givenZeros_returnZeros() {
-        int returnZero = programmers.findMaxMin(0, 0, 0);
+    public void givenNegativeNumberTen_returnNegativeOne() {
+        int returnZero = programmers.differenceMaxMin(-10, -10, -10);
         assertEquals(-1, returnZero);
     }
 
     @Test
+    public void givenNegativeNumberOne_returnSame() {
+        int returnZero = programmers.differenceMaxMin(-1, -1, -1);
+        assertEquals(-1, returnZero);
+    }
+
+    @Test
+    public void givenZeros_returnOne() {
+        int returnZero = programmers.differenceMaxMin(0, 0, 0);
+        assertEquals(1, returnZero);
+    }
+
+    @Test
     public void givenThreeValues_returnMaxAndMinValue() {
-        int returnThousand = programmers.findMaxMin(1500, 500, 1000);
+        int returnThousand = programmers.differenceMaxMin(1500, 500, 1000);
         assertEquals(1000, returnThousand);
     }
 
     @Test
     public void givenInputThreeValues_returnMaxAndMinValue() {
-        int returnOne = programmers.findMaxMin(1, 2, 1);
+        int returnOne = programmers.differenceMaxMin(1, 2, 1);
         assertEquals(1, returnOne);
     }
 
     @Test
-    public void givenFourValues_returnZero() {
-        int maxMinValues = programmers.findMaxMin(100, 200, 300);
+    public void givenThreeValues_returnMaxMinValue() {
+        int maxMinValues = programmers.differenceMaxMin(100, 200, 300);
         assertEquals(200, maxMinValues);
     }
+
+    @Test
+    public void givenThreeNegativeValues_returnMaxAndMinValue() {
+        int maxMinValues = programmers.differenceMaxMin(-100, -200, -300);
+        assertEquals(-1, maxMinValues);
+    }
+
+    @Test
+    public void givenThreeValues_returnDiffMaxAndMinValue() {
+        int maxMinValues = programmers.differenceMaxMin(115, 230, 70);
+        assertEquals(160, maxMinValues);
+    }
 }
+

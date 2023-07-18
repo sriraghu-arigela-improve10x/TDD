@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import java.security.PublicKey;
 
+import static org.junit.Assert.assertEquals;
+
 public class AgeToDaysTest {
 
     private AgeToDays ageToDays;
@@ -18,39 +20,45 @@ public class AgeToDaysTest {
     @Test
     public void nothing(){}
 
-    //input 0 - expected - 0
+    //input 0 - expected - 1
 
     @Test
     public void givenZeroDays_returnZeroAge() {
         int days = ageToDays.convertAgeToDays(0);
-        Assert.assertEquals(0, days);
+        assertEquals(1, days);
+    }
+
+    @Test
+    public void givenNegativeNumber_returnSame() {
+        int days = ageToDays.convertAgeToDays(-10);
+        assertEquals(-1, days);
     }
 
     //input 10 - expected - 3650
     @Test
     public void givenThreeThousandSixHundredAndFiftyDays_returnAgeTen() {
         int days = ageToDays.convertAgeToDays(10);
-        Assert.assertEquals(3650, days);
+        assertEquals(3650, days);
     }
 
     //input 20 - expected - 7300
     @Test
     public void givenSevenThousandThreeHundredDays_returnAgeTwenty() {
         int days = ageToDays.convertAgeToDays(20);
-        Assert.assertEquals(7300, days);
+        assertEquals(7300, days);
     }
 
     //input 30 - expected - 10950
     @Test
     public void givenTenThousandSixHundredFiftyDays_returnAgeThirty() {
         int days = ageToDays.convertAgeToDays(30);
-        Assert.assertEquals(10950, days);
+        assertEquals(10950, days);
     }
 
     //input 60 - expected - 10950
     @Test
     public void givenTwentyOneThousandNineHundredDays_returnAgeSixty() {
         int days = ageToDays.convertAgeToDays(60);
-        Assert.assertEquals(21900, days);
+        assertEquals(21900, days);
     }
 }

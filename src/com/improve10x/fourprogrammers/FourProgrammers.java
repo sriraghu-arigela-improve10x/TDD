@@ -1,10 +1,11 @@
 package com.improve10x.fourprogrammers;
 
 public class FourProgrammers {
-    public int findMaxMin(int paid1, int paid2, int paid3, int paid4) {
-        if (paid1 <= 0 || paid2 <= 0 || paid3 <= 0 || paid4 <= 0) {
+    public int differenceMaxMin(int paid1, int paid2, int paid3, int paid4) {
+        if (paid1 == 0 || paid2 == 0 || paid3 == 0 || paid4 == 0) {
+            return 1;
+        } else if (paid1 < 0 || paid2 < 0 || paid3 < 0 || paid4 < 0) {
             return -1;
-
         } else {
             int difference = 0;
             int maxPaid = 0;
