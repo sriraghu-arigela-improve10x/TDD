@@ -19,6 +19,12 @@ public class IntegerRangeTest {
     }
 
     @Test
+    public void givenZero_returnTrue() {
+        boolean oneAndThreeAndNine = integerRange.findRange(0, 0, 0);
+        assertEquals(false, oneAndThreeAndNine);
+    }
+
+    @Test
     public void givenOneAndThreeAndNine_returnTrue() {
         boolean oneAndThreeAndNine = integerRange.findRange(1, 3, 9);
         assertEquals(false, oneAndThreeAndNine);
@@ -33,6 +39,12 @@ public class IntegerRangeTest {
     @Test
     public void givenThreeAndThreeAndEight_returnTrue() {
         boolean threeAndThreeAndEight = integerRange.findRange(3, 3, 8);
+        assertEquals(true, threeAndThreeAndEight);
+    }
+
+    @Test
+    public void givenOneZeroAndEight_returnTrue() {
+        boolean threeAndThreeAndEight = integerRange.findRange(1, 0, 8);
         assertEquals(true, threeAndThreeAndEight);
     }
 }
