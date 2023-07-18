@@ -11,6 +11,13 @@ public class MinutesIntoSecondsTest {
     public void nothing() {
 
     }
+
+    @Test
+    public void giveZeroMinutes_returnSeconds() {
+        Minutes minutes = new Minutes();
+        int seconds = minutes.convertMinutesIntoSeconds(0);
+        assertEquals(0, seconds);
+    }
     // input 5 - output 300
     @Test
     public void giveFiveMinutes_returnSeconds() {
