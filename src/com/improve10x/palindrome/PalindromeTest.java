@@ -46,4 +46,10 @@ public class PalindromeTest {
         boolean palindromeNum = palindrome.isPalindrome(112);
         assertEquals(false, palindromeNum);
     }
+
+    @Test
+    public void givenOneHundredTwelve_returnPalindromeNumber() {
+        boolean palindromeNum = palindrome.isPalindrome(112);
+        assertEquals(false, palindromeNum);
+    }
 }
