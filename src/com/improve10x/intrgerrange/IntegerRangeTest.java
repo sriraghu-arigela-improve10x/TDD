@@ -20,31 +20,37 @@ public class IntegerRangeTest {
 
     @Test
     public void givenZero_returnTrue() {
-        boolean oneAndThreeAndNine = integerRange.findRange(0, 0, 0);
+        boolean oneAndThreeAndNine = integerRange.findIntegerRange(0, 0, 0);
         assertEquals(false, oneAndThreeAndNine);
     }
 
     @Test
     public void givenOneAndThreeAndNine_returnTrue() {
-        boolean oneAndThreeAndNine = integerRange.findRange(1, 3, 9);
+        boolean oneAndThreeAndNine = integerRange.findIntegerRange(1, 3, 9);
         assertEquals(false, oneAndThreeAndNine);
     }
 
     @Test
     public void givenSixAndOneAndSix_returnFalse() {
-        boolean sixAndOneAndSix = integerRange.findRange(6, 1, 6);
+        boolean sixAndOneAndSix = integerRange.findIntegerRange(6, 1, 6);
         assertEquals(false, sixAndOneAndSix);
     }
 
     @Test
     public void givenThreeAndThreeAndEight_returnTrue() {
-        boolean threeAndThreeAndEight = integerRange.findRange(3, 3, 8);
+        boolean threeAndThreeAndEight = integerRange.findIntegerRange(3, 3, 8);
         assertEquals(true, threeAndThreeAndEight);
     }
 
     @Test
     public void givenOneZeroAndEight_returnTrue() {
-        boolean threeAndThreeAndEight = integerRange.findRange(1, 0, 8);
+        boolean threeAndThreeAndEight = integerRange.findIntegerRange(1, 0, 8);
         assertEquals(true, threeAndThreeAndEight);
+    }
+
+    @Test
+    public void givenOneSevenAndEight_returnTrue() {
+        boolean threeAndThreeAndEight = integerRange.findIntegerRange(1, 7, 8);
+        assertEquals(false, threeAndThreeAndEight);
     }
 }

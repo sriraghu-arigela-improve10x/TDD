@@ -1,7 +1,7 @@
 package com.improve10x.intrgerrange;
 
 public class IntegerRange {
-    public boolean findRange(int n, int a, int b) {
+    public boolean findIntegerRange(int n, int a, int b) {
         boolean result = false;
         if (n < 0) {
             result = false;

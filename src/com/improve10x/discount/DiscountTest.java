@@ -26,6 +26,12 @@ public class DiscountTest {
         assertEquals(0, totalDiscount);
     }
 
+    @Test
+    public void givenPriceOneDiscountOne_returnDiscountOne() {
+        int totalDiscount = discount.findDiscount(1, 1);
+        assertEquals(1, totalDiscount);
+    }
+
     //discount(1500, 50) -> 750
     @Test
     public void givenPriceAndDiscount_returnTotalDiscount() {
@@ -52,5 +58,11 @@ public class DiscountTest {
     public void givenPriceDiscountValue_returnTotalDiscount() {
         int totalDiscount = discount.findDiscount(1000, 75);
         assertEquals(250, totalDiscount);
+    }
+
+    @Test
+    public void givenPriceDiscounts_returnTotalDiscount() {
+        int totalDiscount = discount.findDiscount(800, 75);
+        assertEquals(200, totalDiscount);
     }
 }
