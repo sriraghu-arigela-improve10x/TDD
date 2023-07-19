@@ -1,7 +1,7 @@
 package com.improve10x.palindrome;
 
 public class Palindrome {
-    public boolean isPalindromeNumber(int n) {
+    public boolean isPalindrome(int n) {
         boolean result = false;
         int originalNumber = n;
         int reverseNumber = 0;
