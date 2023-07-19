@@ -51,4 +51,16 @@ public class TwoMakesTenTest {
         boolean fourAndSix = twoMakesTen.getTwoMakesTen(5, 5);
         assertEquals(true, fourAndSix);
     }
+
+    @Test
+    public void givenSevenAndTwo_returnSTrue() {
+        boolean fourAndSix = twoMakesTen.getTwoMakesTen(7, 2);
+        assertEquals(false, fourAndSix);
+    }
+
+    @Test
+    public void givenThreeAndSeven_returnSTrue() {
+        boolean fourAndSix = twoMakesTen.getTwoMakesTen(3, 7);
+        assertEquals(true, fourAndSix);
+    }
 }
