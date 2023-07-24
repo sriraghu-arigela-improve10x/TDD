@@ -55,6 +55,18 @@ public class StrPalindromeTest {
     }
 
     @Test
+    public void givenAABCharacters_returnTrue() {
+        boolean palindromeText = palindrome.isPalindrome("aab");
+        assertEquals(false, palindromeText);
+    }
+
+    @Test
+    public void givenAAACharacters_returnTrue() {
+        boolean palindromeText = palindrome.isPalindrome("aaa");
+        assertEquals(true, palindromeText);
+    }
+
+    @Test
     public void givenStringTextABAABAABA_returnTrue() {
         boolean palindromeText = palindrome.isPalindrome("abaabaaba");
         assertEquals(true, palindromeText);

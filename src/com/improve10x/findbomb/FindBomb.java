@@ -1,8 +1,13 @@
 package com.improve10x.findbomb;
 
 public class FindBomb {
-    public String CheckWord(String name) {
+    public String findTheBomb(String name) {
         String result = "";
+        if(name == null) {
+            return "null";
+        } else if (name == "") {
+            return "";
+        }
         String textInLowerCase;
         textInLowerCase = name.toLowerCase();
         if(textInLowerCase.contains("bomb")){

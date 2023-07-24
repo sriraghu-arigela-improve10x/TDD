@@ -22,6 +22,12 @@ public class IsDivisibleByFiveTest {
     @Test
     public void givenIsDivisibleZero_returnFalse() {
         boolean divisible = isDivisible.isDivisibleByFive(0);
+        assertEquals(true, divisible);
+    }
+
+    @Test
+    public void givenDivisibleMinusOne_returnFalse() {
+        boolean divisible = isDivisible.isDivisibleByFive(-1);
         assertEquals(false, divisible);
     }
 
@@ -37,6 +43,12 @@ public class IsDivisibleByFiveTest {
     public void givenIsDivisibleFive_returnTrue() {
         boolean divisible = isDivisible.isDivisibleByFive(37);
         assertEquals(false, divisible);
+    }
+
+    @Test
+    public void givenDivisibleFive_returnTrue() {
+        boolean divisible = isDivisible.isDivisibleByFive(5);
+        assertEquals(true, divisible);
     }
 
     // divisibleByFive (57) = false

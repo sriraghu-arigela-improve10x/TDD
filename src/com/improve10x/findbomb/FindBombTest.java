@@ -17,24 +17,37 @@ public class FindBombTest {
     public void nothing() {
     }
 
+    @Test
+    public void givenNull_returnNUll() {
+        String text = findBomb.findTheBomb(null);
+        assertEquals("null", text);
+    }
+
+    @Test
+    public void givenEmpty_returnEmpty() {
+        String text = findBomb.findTheBomb("");
+        assertEquals("", text);
+    }
+
+
     //bomb("There is a bomb.") ➞ "DUCK!"
     @Test
     public void givenThereIsABomb_returnDUCKWithExclamationMark() {
-        String text = findBomb.CheckWord("There is a bomb.");
+        String text = findBomb.findTheBomb("There is a bomb.");
         assertEquals("DUCK!", text);
     }
 
     //bomb("Hey, did you think there is a BOMB?") ➞ "DUCK!"
     @Test
     public void givenText_returnDUCKWithExclamationMark() {
-        String text = findBomb.CheckWord("Hey, did you think there is a BOMB?");
+        String text = findBomb.findTheBomb("Hey, did you think there is a BOMB?");
         assertEquals("DUCK!", text);
     }
 
     //bomb("This goes boom!!!") ➞ "Relax, there's no bomb."
     @Test
     public void givenText_returnRelax() {
-        String text = findBomb.CheckWord("This goes boom!!!");
+        String text = findBomb.findTheBomb("This goes boom!!!");
         assertEquals("Relax, there's no bomb.", text);
     }
 }

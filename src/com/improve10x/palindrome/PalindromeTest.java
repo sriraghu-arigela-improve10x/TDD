@@ -18,21 +18,39 @@ public class PalindromeTest {
     public void nothing() {}
 
     @Test
-    public void givenZer_returnPalindromeZero() {
+    public void givenZero_returnPalindromeZero() {
         boolean palindromeNum = palindrome.isPalindrome(0);
         assertEquals(true, palindromeNum);
     }
 
+
     @Test
-    public void givenOneTwoOneNumber_returnPalindromeNumber() {
-        boolean palindromeNum = palindrome.isPalindrome(121);
+    public void givenMinusOne_returnPalindromeMinusOne() {
+        boolean palindromeNum = palindrome.isPalindrome(-1);
+        assertEquals(true, palindromeNum);
+    }
+    @Test
+    public void givenMinusTen_returnPalindromeMinusOne() {
+        boolean palindromeNum = palindrome.isPalindrome(-10);
         assertEquals(true, palindromeNum);
     }
 
     @Test
-    public void givenOneThousandOneNumber_returnPalindromeNumber() {
-        boolean palindromeNum = palindrome.isPalindrome(1001);
+    public void givenOne_returnPalindromeOne() {
+        boolean palindromeNum = palindrome.isPalindrome(1);
         assertEquals(true, palindromeNum);
+    }
+
+    @Test
+    public void givenEleven_returnPalindromeNumber() {
+        boolean palindromeNum = palindrome.isPalindrome(11);
+        assertEquals(true, palindromeNum);
+    }
+
+    @Test
+    public void givenFifteen_returnPalindromeNumber() {
+        boolean palindromeNum = palindrome.isPalindrome(15);
+        assertEquals(false, palindromeNum);
     }
 
     @Test
@@ -48,8 +66,14 @@ public class PalindromeTest {
     }
 
     @Test
-    public void givenOneHundredTwelve_returnPalindromeNumber() {
-        boolean palindromeNum = palindrome.isPalindrome(112);
-        assertEquals(false, palindromeNum);
+    public void givenOneTwoOneNumber_returnPalindromeNumber() {
+        boolean palindromeNum = palindrome.isPalindrome(121);
+        assertEquals(true, palindromeNum);
+    }
+
+    @Test
+    public void givenOneThousandOneNumber_returnPalindromeNumber() {
+        boolean palindromeNum = palindrome.isPalindrome(1001);
+        assertEquals(true, palindromeNum);
     }
 }
